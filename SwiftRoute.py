@@ -62,7 +62,7 @@ while True:
         cv2.rectangle(frame, (x3, y3), (x4, y4), (0, 255, 0), 2)
         cv2.putText(frame, f'{obj_class} {id}', (cx, cy), cv2.FONT_HERSHEY_COMPLEX, 0.8, (0, 255, 255), 2)
 
-        if cx < frame.shape[1] // 2:  # Left half for downward counting
+        if cx < frame.shape[1] // 2:  #downward counting
             if (y_line < (cy + 7) and y_line > (cy - 7)):
                 if id not in counter_down_cars and id not in counter_down_motorcycles and id not in counter_down_people:  
                     down[id] = cy
@@ -73,7 +73,7 @@ while True:
                     elif obj_class == 'person':
                         counter_down_people.add(id)
 
-        if cx >= frame.shape[1] // 2:  # Right half for upward counting
+        if cx >= frame.shape[1] // 2:  #upward counting
             if (y_line < (cy + 7) and y_line > (cy - 7)):
                 if id not in counter_up_cars and id not in counter_up_motorcycles and id not in counter_up_people:  
                     up[id] = cy
