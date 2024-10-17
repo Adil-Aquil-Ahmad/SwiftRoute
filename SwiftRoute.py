@@ -134,12 +134,4 @@ def CarCounter(traffic_video):
 
     return cars_down, motorcycles_down, cars_up, motorcycles_up, people_left, people_right
 
-Traffic1 = CarCounter('traffic_video1.mp4')
-Traffic2 = CarCounter('traffic_video2.mp4')
-Traffic3 = CarCounter('traffic_video3.mp4')
-Traffic4 = CarCounter('traffic_video4.mp4')
 
-print(Traffic1)
-print(Traffic2)
-print(Traffic3)
-print(Traffic4)
