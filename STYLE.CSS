@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bck:#f4f4f4;
+    --fnt:#333;
+    --hvr:orange;
+    --hdr:#fff;
+    ---rght:#eef4f1;
+    ---bdr:#ccc;
+}
+.darktheme{
+    --bck:#0b0b0b;
+    --fnt:#fcfcfc;
+    --hvr:#fff200;
+    --hdr:#0f0f0f;
+    ---rght:#110b0e;
+    ---bdr:#303030;
+}
+#icon:hover{
+    transition: hover 3s ease;
+    content:url(images/moon.png);
+    transform: scale(1.1);
+    transition: transform 2.5s;
+}
+.darktheme #icon:hover{
+    transition: hover 3s ease;
+    content: url(images/sun.png);
+    transform: scale(1.1);
+    transition: transform 2.5s;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: var(--fnt);
+    background-color: var(--bck);
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+#icon{
+    width:3vh;
+    margin-left: 2vh;
+}
+
+
+nav a:hover{
+    color:var(--hvr);
+    transition: 0.5s ease-in-out;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    height:10vh;
+    background-color:var(--hdr);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.logo {
+    width: 10vh;
+    margin-top: -3vh;
+
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--fnt);
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--hdr);
+    transition: background-color 0.5s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add margin-top for spacing from the navigation */
+}
+
+.content-left {
+    width: 60%;
+    padding: 40px;
+}
+
+.content-left h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.content-left h1 span {
+    color: var(--hvr);
+}
+
+.content-left p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.stamps {
+    display: flex;
+    align-items: center;
+}
+
+.stamp {
+    margin-right: 20px;
+}
+
+.arrow {
+    font-size: 2rem;
+}
+
+.content-right {
+    width: 40%;
+    background-color: var(---rght);
+    transition: background-color 0.5s ease-in-out;
+    padding: 40px;
+}
+
+.login h2 {
+    font-size: 2.9rem;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    
+
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(---bdr);
+    border-radius: 5px;
+}
+
+.input-group input[type="range"] {
+    width: 100%;
+}
+
+.dimensions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dimensions div {
+    width: 30%;
+}
+
+.smartroute{
+    position: absolute;
+    left:16vw;
+    color: var(--fnt);
+    
+
+    top:3vh;
+}
+.smartroute a{
+    text-decoration:none;
+    color: var(--fnt);
+
+}
+.smartroute a:hover{
+    color:var(--hvr);
+    transition: 0.5s ease-in-out;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--fnt);
+    color: var(--hdr);
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Ensure the button has space from form elements */
+}
+button:hover{
+    background-color:var(--hvr);
+}
+/* .more .dnt{
+
+    margin-top: 20px;
+    margin-left: 100PX;
+    font-size: 1.2rem;
+
+} */
+/* .more .sgnup{
+    margin-top: 10px;
+    margin-left: 145PX;
+    font-size: 1.1rem; 
+} */
+.more .sgnup a{
+    color:var(--hvr); 
+}
+.more {
+    margin-top: 10px;
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem; 
+}
+
+.icon{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    color:var(--hvr);
+
+}
+.icon a{
+    color:var(--hvr);
+}
