@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="shortcut icon" href="images/logo(1).png" type="image/x-icon">
+    <link rel="stylesheet" href="STYLE.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+    
+        <a href="#"><img class="logo" src="images/logo(1).png" ></a>
+        
+        </a><h3  CLASS="smartroute">
+            <a href="#">SMARTROUTE</a>
+       
+        </h3>
+        <nav>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <!-- <li><a href="#">Vacancies</a></li> -->
+                 <a href="#"><img src="images/sun.png" id="icon"></a>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="content-left">
+            <h1>Express delivery of documents Worldwide <span>*</span></h1>
+            <p>A team of professionals with experience in various areas of logistics and able to provide our customers with the highest level of service.</p>
+            
+            <div class="stamps">
+                <!-- <div class="stamp"><img src="stamp1.png" alt="Cancun Airport"></div>
+                <div class="arrow">→</div>
+                <div class="stamp"><img src="stamp2.png" alt="Dublin Airport"></div>
+                <div class="arrow">→</div>
+                <div class="stamp"><img src="stamp3.png" alt="Dublin Airport"></div> -->
+            </div>
+        </section>
+        
+        <section class="content-right">
+            <div class="login">
+                <h2>LOG IN</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="from">E-mail</label>
+                        <input type="email" >
+                    </div>
+                    <div class="input-group">
+                        <label for="to">Password</label>
+                        <input type="password" >
+                    </div>
+                    <!-- <div class="input-group">
+                        <label for="departure-type">Departure Type</label>
+                        <select id="departure-type" name="departure-type">
+                            <option value="package">Package</option>
+                            <option value="document">Document</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="service-type">Service Type</label>
+                        <select id="service-type" name="service-type">
+                            <option value="post-office">To the post office</option>
+                            <option value="home-delivery">Home delivery</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="weight">Total Weight, Kg</label>
+                        <input type="range" id="weight" name="weight" min="0" max="250" step="1">
+                    </div>
+                    <div class="input-group dimensions">
+                        <label>Dimensions (cm)</label>
+                        <div> -->
+                            <!-- <input type="text" placeholder="Length" name="length">
+                            <input type="text" placeholder="Width" name="width">
+                            <input type="text" placeholder="Height" name="height">
+                        </div> -->
+                    <!-- </div> -->
+                    <button type="submit">Log In</button>
+                    <div class="more">
+                        <p class="dnt">Don,t have an account</p><br>
+                        <p class="sgnup"><a href="#" >Sign up </a>Here</p><br>
+                        <p class="liw">Log in with</p>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+
+                </form>
+                
+
+                <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+            </div>
+        </section>
+    </main>
+    <script>
+        var icon=document.getElementById("icon");
+    
+        icon.onclick=function(){
+            document.body.classList.toggle("darktheme");
+            if(document.body.classList.contains("darktheme")){
+                icon.src = "images/moon.png";
+            }else{
+               icon.src = "images/sun.png";
+            }
+        }
+    </script>
+</body>
+</html>
