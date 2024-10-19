@@ -6,6 +6,7 @@ from tracker import *
 def CarCounter(traffic_video):
     model = YOLO('yolov9c.pt')
     model.overrides['verbose'] = True
+    model.overrides['device'] = 'cuda' 
     class_list = [
         'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 
         'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 

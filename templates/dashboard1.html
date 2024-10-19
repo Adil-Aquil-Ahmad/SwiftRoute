@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="../static/images/logo(1).png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/CSS/dashboard1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hello, <span class="highlight">{{ username }}</span> 👋</h1>
+            <p>Traffic stats are here</p>
+        </header>
+        <section class="statistics">
+            <div class="stat-card ongoing">
+                <h3>Total Vehicles at Traffic</h3>
+                <p class="number" id="car_total">Loading...</p>
+            </div>
+            <div class="stat-card shipped">
+                <h3>Total Pedestrians at Traffic</h3>
+                <p class="number" id="pedestrian_total">Loading...</p>
+            </div>
+        </section>
+        
+        <section class="SCENE">
+            <h3>PRESENT SCENARIO</h3>
+            <div class="scenario">
+                <div class="block">
+                    <h4>Ain (East)</h4>
+                    <p class="number" id="ain_count">Loading...</p>
+                </div>
+                <div class="block">
+                    <h4>Bin (North)</h4>
+                    <p class="number" id="bin_count">Loading...</p>
+                </div>
+                <div class="block">
+                    <h4>Cin (West)</h4>
+                    <p class="number" id="cin_count">Loading...</p>
+                </div>
+                <div class="block">
+                    <h4>Din (South)</h4>
+                    <p class="number" id="din_count">Loading...</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="shipping-details">
+            <h3>TIMING OF TRAFFIC</h3>
+            <div class="status">
+                <div class="status-step">
+                    <h4>Ain (East)</h4>
+                    <p class="number" id="ain_time">Loading...</p>
+                </div>
+                <div class="status-step">
+                    <h4>Bin (North)</h4>
+                    <p class="number" id="bin_time">Loading...</p>
+                </div>
+                <div class="status-step">
+                    <h4>Cin (West)</h4>
+                    <p class="number" id="cin_time">Loading...</p>
+                </div>
+                <div class="status-step">
+                    <h4>Din (South)</h4>
+                    <p class="number" id="din_time">Loading...</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="shipping-history">
+            <h3>RULE VIOLATORS</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>TIME</th>
+                        <th>VEHICLE</th>
+                        <th>VIOLATION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1234-JH</td>
+                        <td>September 1, 2022</td>
+                        <td>22:34:54.67</td>
+                        <td>Car</td>
+                        <td>SeatBelt</td>
+                    </tr>
+                    <tr>
+                        <td>5678-JN</td>
+                        <td>September 1, 2022</td>
+                        <td>23:12:45.90</td>
+                        <td>Bike</td>
+                        <td>No Helmet</td>
+                    </tr>
+                    <tr>
+                        <td>9546-TG</td>
+                        <td>September 1, 2022</td>
+                        <td>23:56:45.76</td>
+                        <td>CAR</td>
+                        <td>OVERSPEED</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script>
+        function fetchTrafficData() {
+            fetch('/update_traffic')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('car_total').textContent = data.car_total;
+                    document.getElementById('pedestrian_total').textContent = data.pedestrian_total;
+                    document.getElementById('ain_count').textContent = data.Ain;
+                    document.getElementById('bin_count').textContent = data.Bin;
+                    document.getElementById('cin_count').textContent = data.Cin;
+                    document.getElementById('din_count').textContent = data.Din;
+                    document.getElementById('ain_time').textContent = data.ain_time;
+                    document.getElementById('bin_time').textContent = data.bin_time;
+                    document.getElementById('cin_time').textContent = data.cin_time;
+                    document.getElementById('din_time').textContent = data.din_time;
+                })
+                .catch(error => console.error('Error fetching traffic data:', error));
+        }
+
+        setInterval(fetchTrafficData, 10000);
+        fetchTrafficData();
+    </script>
+</body>
+</html>

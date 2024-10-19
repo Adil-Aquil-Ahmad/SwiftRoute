@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+/* #lg{
+    position: absolute;
+    right: 20vh;
+    top 
+} */
+
+header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+header {
+    
+    justify-content:s;
+    margin-bottom: 30px;
+}
+
+
+header h1 {
+    font-size: 2em;
+}
+
+.highlight {
+    color: #E5FF5D;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+}
+.scenario {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.block {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 23%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.block:hover {
+    transform: scale(1.05);
+}
+
+.block h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.stat-card h3 {
+    font-size: 1.2em;
+}
+
+.stat-card .number {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.decrease {
+    color: #ff5e5e;
+}
+
+.increase {
+    color: #5ee05e;
+}
+
+.scenerio {
+    margin-bottom: 30px;
+}
+
+
+
+.chart{
+    margin-top: 30vh;
+}
+
+.shipping-details {
+    margin-bottom: 30px;
+}
+
+.shipping-details .status {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.shipping-details .status-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.shipping-details .checkmark {
+    background-color: #5ee05e;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #000;
+    margin-right: 10px;
+}
+
+.shipping-history table {
+    width: 100%;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.shipping-history th, .shipping-history td {
+    padding: 10px;
+    text-align: left;
+}
+
+.ongoing {
+    color: #ff5e5e;
+}
+
+.shipped {
+    color: #5ee05e;
+}

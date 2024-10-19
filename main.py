@@ -1,4 +1,5 @@
 from SwiftRoute import CarCounter
+import time
 
 Traffic1 = CarCounter('traffic_video1.mp4')
 Traffic2 = CarCounter('traffic_video2.mp4')
@@ -26,6 +27,7 @@ class Road:
             Cin.Light_Color = "Red"
             Din.Light_Color = "Green"
         else:
+            Ain.Light_Color, Din.Light_Color, Aout.Light_Color, Dout.Light_Color, Bin.Light_Color, Cin.Light_Color, Bout.Light_Color, Cout.Light_Color = Bin.Light_Color, Cin.Light_Color, Bout.Light_Color, Cout.Light_Color, Ain.Light_Color, Din.Light_Color, Aout.Light_Color, Dout.Light_Color 
             
             pass
         return Ain.Light_Color, Bin.Light_Color, Cin.Light_Color, Din.Light_Color
@@ -35,7 +37,11 @@ class Road:
         Bin.Time_Interval = (180 * (Cin.Vehicle_Amount + Bin.Vehicle_Amount) / C_Total) + (180 - Ain.Time_Interval)
         Cin.Time_Interval = (180 * (Cin.Vehicle_Amount + Bin.Vehicle_Amount) / C_Total) + (180 - Ain.Time_Interval)
         Din.Time_Interval = 180 * (Ain.Vehicle_Amount + Din.Vehicle_Amount) / C_Total
-            
+        Aout.Time_Interval = 180 * (Ain.Vehicle_Amount + Din.Vehicle_Amount) / C_Total
+        Bout.Time_Interval = (180 * (Cin.Vehicle_Amount + Bin.Vehicle_Amount) / C_Total) + (180 - Ain.Time_Interval)
+        Cout.Time_Interval = (180 * (Cin.Vehicle_Amount + Bin.Vehicle_Amount) / C_Total) + (180 - Ain.Time_Interval)
+        Dout.Time_Interval = 180 * (Ain.Vehicle_Amount + Din.Vehicle_Amount) / C_Total
+        
         return Ain.Time_Interval, Bin.Time_Interval, Cin.Time_Interval, Din.Time_Interval
 
 # Create instances of Road
@@ -51,11 +57,23 @@ Dout = Road("D", "Green", "North", Traffic4[2] + Traffic4[3], Traffic4[5])
 Car_Total = Ain.Vehicle_Amount + Bin.Vehicle_Amount + Cin.Vehicle_Amount + Din.Vehicle_Amount
 P_Total = Ain.People_Amount + Bin.People_Amount + Cin.People_Amount + Din.People_Amount
 
+
 light_colors = Ain.LightChange(Ain, Bin, Cin, Din, Aout, Bout)
 print("Updated Light Colors: Ain -", light_colors[0], ", Bin -", light_colors[1], ", Cin -", light_colors[2], ", Din -", light_colors[3])
 
 time_intervals = Ain.TimeInterval(Ain, Bin, Cin, Din, Car_Total)
 print("Updated Time Intervals: Ain -", time_intervals[0], ", Bin -", time_intervals[1], ", Cin -", time_intervals[2], ", Din -", time_intervals[3])
+
+while True:
+    if Ain.Light_Color == "Red":
+        light_colors = Ain.LightChange(Ain, Bin, Cin, Din, Aout, Bout)
+        print("Updated Light Colors: Ain -", light_colors[0], ", Bin -", light_colors[1], ", Cin -", light_colors[2], ", Din -", light_colors[3])
+        time.sleep(Ain.Time_Interval)
+    else:
+        light_colors = Ain.LightChange(Ain, Bin, Cin, Din, Aout, Bout)
+        print("Updated Light Colors: Ain -", light_colors[0], ", Bin -", light_colors[1], ", Cin -", light_colors[2], ", Din -", light_colors[3])
+        time.sleep(Cin.Time_Interval)
+
 
 print(Car_Total)
 print(P_Total)
