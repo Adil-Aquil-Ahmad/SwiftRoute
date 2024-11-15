@@ -1,10 +1,10 @@
 from SwiftRoute import CarCounter
 import time
 
-Traffic1 = CarCounter('traffic_video1.mp4')
-Traffic2 = CarCounter('traffic_video2.mp4')
-Traffic3 = CarCounter('traffic_video3.mp4')
-Traffic4 = CarCounter('traffic_video4.mp4')
+Traffic1 = CarCounter('Road_A.mp4')
+Traffic2 = CarCounter('Road_B.mp4')
+Traffic3 = CarCounter('Road_C.mp4')
+Traffic4 = CarCounter('Road_D.mp4')
 
 class Road:
     def __init__(self, Name: str, Light_Color: str, Direction: str, Vehicle_Amount=0, People_Amount=0, Time_Interval=180):
