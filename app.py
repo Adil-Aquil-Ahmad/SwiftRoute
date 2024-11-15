@@ -8,7 +8,10 @@ from concurrent.futures import ProcessPoolExecutor
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
-
+credentials = {
+    'adil': 'adil786',
+    'arveen': 'arveen786'
+}
 
 roads = {}
 road_A = {}
@@ -57,6 +60,10 @@ def process_video(video):
 
 @app.route('/')
 def index():
+    open('Vehicle_Database_A.csv', 'w') 
+    open('Vehicle_Database_B.csv', 'w')
+    open('Vehicle_Database_C.csv', 'w')
+    open('Vehicle_Database_D.csv', 'w')
     return render_template('index.html')
 
 @app.route('/login', methods=['POST'])

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
+    <title>Register</title>
     <link rel="shortcut icon" href="..\static\images\logo(1).png" type="image/x-icon">
     <link rel="stylesheet" href="..\static\CSS\STYLE.CSS">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,36 +21,33 @@
             </ul>
         </nav>
     </header>
-    
+<main>
 <div class="register">
             <div class="login">
-                <h2>LOG IN</h2>
+                <h2>REGISTER</h2>
                 <form method="POST" action="/login"> <!-- Update action to point to the login route -->
                     <div class="input-group">
+                        <label for="from">G-mail</label>
+                        <input class="inputbox" type="email" name="username" required>
+                    </div>
+                    <div class="input-group">
                         <label for="from">USERNAME</label>
-                        <input type="text" name="username" required>
+                        <input class="inputbox" type="text" name="username" required>
                     </div>
                     <div class="input-group">
                         <label for="to">Password</label>
-                        <input type="password" name="password" required>
+                        <input class="inputbox" type="password" name="password" required>
                     </div>
                     
-                    <button type="submit">Log In</button>
+                    <button type="submit">Register</button>
                     <div class="more">
-                        <p class="dnt">Don,t have an account</p><br>
-                        <p class="sgnup"><a href="#">Sign up</a> Here</p><br>
-                        <p class="liw">Log in with</p>
-                    </div>
-                    <div class="icon">
-                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
-                    </div>
+                        
                 </form>
 
-                <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+                
             </div>
 </div>
+</main>
 
     <script>
         var icon = document.getElementById("icon");
