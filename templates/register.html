@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="shortcut icon" href="..\static\images\logo(1).png" type="image/x-icon">
+    <link rel="stylesheet" href="..\static\CSS\STYLE.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="#"><img class="logo" src="../static/images/logo(1).png"></a>
+        <h3 class="smartroute"><a href="#">SMARTROUTE</a></h3>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <a href="#"><img src="../static/images/moon.png" id="icon"></a>
+            </ul>
+        </nav>
+    </header>
+    
+<div class="register">
+            <div class="login">
+                <h2>LOG IN</h2>
+                <form method="POST" action="/login"> <!-- Update action to point to the login route -->
+                    <div class="input-group">
+                        <label for="from">USERNAME</label>
+                        <input type="text" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="to">Password</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    
+                    <button type="submit">Log In</button>
+                    <div class="more">
+                        <p class="dnt">Don,t have an account</p><br>
+                        <p class="sgnup"><a href="#">Sign up</a> Here</p><br>
+                        <p class="liw">Log in with</p>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </div>
+                </form>
+
+                <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+            </div>
+</div>
+
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function() {
+            document.body.classList.toggle("darktheme");
+            if (document.body.classList.contains("darktheme")) {
+                icon.src = "../static/images/moon.png";
+            } else {
+                icon.src = "../static/images/sun.png";
+            }
+        }
+    </script>
+</body>
+</html>

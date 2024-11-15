@@ -1,0 +1,129 @@
+#tl{
+    width:350px;
+    margin-left: 200px;
+}
+
+
+/* AIN LIGHTS */
+.ainred{
+    width:2.5vh;
+    height: 2.5vh;
+    background: red;
+    border-radius:50%;
+
+    position: absolute;
+    margin-left: -81.5px;
+    margin-top: 83px;
+}
+.ainyellow{
+    width:2.5vh;
+    height: 2.5vh;
+    background: yellow;
+    border-radius:50%;
+    position: absolute;
+    margin-left: -104.5px;
+    margin-top: 87px;
+}
+.aingreen{
+    width:2.5vh;
+    height: 2.5vh;
+    background: green;
+    border-radius:50%;
+    position: absolute;
+    margin-left: -128.1px;
+    margin-top: 91.3px;
+}
+
+
+
+/* BIN LIGHTS */
+.binred{
+    width:2.6vh;
+    height: 2.6vh;
+    background: red;
+    border-radius:50%;
+
+    position: absolute;
+    margin-left: -272px;
+    margin-top: 63.9px;
+}
+.binyellow{
+    width:2.5vh;
+    height: 2.5vh;
+    background: yellow;
+    border-radius:50%;
+    position: absolute;
+    margin-left: -272px;
+    margin-top: 89.55px;
+}
+.bingreen{
+    width:2.6vh;
+    height: 2.6vh;
+    background: green;
+    border-radius:50%;
+    position: absolute;
+    margin-left: -272.4px;
+    margin-top: 115px;
+}
+
+
+/* CIN LIGHTS */
+.cinred{
+    width:2.5vh;
+    height: 2.5vh;
+    background: red;
+    border-radius:50%;
+
+    position: absolute;
+    margin-left: -77px;
+    margin-top: 290.9px;
+}
+.cinyellow{
+    width:2.5vh;
+    height: 2.5vh;
+    background: yellow;
+    border-radius:50%;
+    position: absolute;
+    margin-left: -76.8px;
+    margin-top: 265.5px;
+}
+.cingreen{
+    width:2.5vh;
+    height: 2.5vh;
+    background: green;
+    border-radius:50%;
+    position: absolute;
+    margin-left: -76.3px;
+    margin-top: 239.8px;
+}
+
+
+/* DIN LIGHTS */
+.dinred{
+    width:2.6vh;
+    height: 2.6vh;
+    background: red;
+    border-radius:50%;
+
+    position: absolute;
+    margin-left: -309.7px;
+    margin-top: 269.3px;
+}
+.dinyellow{
+    width:2.5vh;
+    height: 2.5vh;
+    background: yellow;
+    border-radius:50%;
+    position: absolute;
+    margin-left: -285.7px;
+    margin-top: 274px;
+}
+.dingreen{
+    width:2.6vh;
+    height: 2.6vh;
+    background: green;
+    border-radius:50%;
+    position: absolute;
+    margin-left: -263.4px;
+    margin-top: 278.2px;
+}

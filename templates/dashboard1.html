@@ -6,6 +6,7 @@
     <title>Dashboard</title>
     <link rel="shortcut icon" href="../static/images/logo(1).png" type="image/x-icon">
     <link rel="stylesheet" href="../static/CSS/dashboard1.css">
+    <link rel="stylesheet" href="../static/CSS/dashboard2.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -25,11 +26,30 @@
                 <p class="number" id="pedestrian_total">Loading...</p>
             </div>
         </section>
-        <SCETION class="lightbox">
-                <div class="ist"></div>
-                <div class="iind"></div>
-                <div class="iiird"></div>
-        </SCETION>
+        <img id= "tl" src="../static/images/PATHROAD.png">
+        <div class="Ain">
+            <div class="ainred"></div>
+            <div class="ainyellow"></div>
+            <div class="aingreen"></div>
+        </div>
+
+        <div class="Bin">
+            <div class="binred"></div>
+            <div class="binyellow"></div>
+            <div class="bingreen"></div>
+        </div>
+
+        <div class="Cin">
+            <div class="cinred"></div>
+            <div class="cinyellow"></div>
+            <div class="cingreen"></div>
+        </div>
+
+        <div class="Din">
+            <div class="dinred"></div>
+            <div class="dinyellow"></div>
+            <div class="dingreen"></div>
+        </div>
     </DIV>
         
         <section class="SCENE">
@@ -133,8 +153,8 @@
                 .catch(error => console.error('Error fetching traffic data:', error));
         }
 
-        setInterval(fetchTrafficData, 10000);
-        fetchTrafficData();
+        setInterval(fetchTrafficData, 100);
+        fetchTrafficData();  
     </script>
 </body>
 </html>

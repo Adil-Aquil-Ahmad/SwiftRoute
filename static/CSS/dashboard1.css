@@ -24,7 +24,7 @@ body {
     
     
 }
-.lightbox {
+/* .lightbox {
     
     align-items: center;
     margin-top: 9px;
@@ -40,28 +40,12 @@ body {
 
    
     
-}
+} */
 
-.ist{
-    width:8vh;
-    border-radius:50%;
-    background: red;
-    height :8vh;
-    margin-bottom: 4px;
-}
-.iind{
-    width:8vh;
-    border-radius:50%;
-    background: rgb(255, 242, 0);
-    height :8vh;
-    margin-bottom: 4px;
-}
-.iiird{
-    width:8vh;
-    border-radius:50%;
-    background: rgb(0, 255, 55);
-    height :8vh;
-}
+
+
+
+
 .scenario{
     overflow-y: hidden;
 }
@@ -71,6 +55,11 @@ body {
     padding: 20px;
     border-radius: 10px;
     width:  auto;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 .stat-card2 {
     position:relative;
@@ -80,6 +69,10 @@ body {
     padding: 20px;
     border-radius: 10px;
     width: 450px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 }
 header {
@@ -173,6 +166,7 @@ header h1 {
 
 .shipping-details {
     margin-bottom: 30px;
+    margin-top: 30px;
 
 }
 
