@@ -2,32 +2,93 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #111;
-    color: #fff;
+    background-color: #fefefe;
+    color: #000;
 }
 
 .container {
+    position:relative;
     width: 80%;
     margin: auto;
     padding: 20px;
+    
+    
 }
-/* #lg{
-    position: absolute;
-    right: 20vh;
-    top 
-} */
+.upperbox{
+    display:flex;
+    
+    
+}
+.lightbox {
+    
+    align-items: center;
+    margin-top: 9px;
+    margin-left: auto;
+    background-color: #b5b0b0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 20vh;
+    height: 30vh;
+    display: flex;;
+    flex-direction:column;
+    justify-content: center;
 
+   
+    
+}
+
+.ist{
+    width:8vh;
+    border-radius:50%;
+    background: red;
+    height :8vh;
+    margin-bottom: 4px;
+}
+.iind{
+    width:8vh;
+    border-radius:50%;
+    background: rgb(255, 242, 0);
+    height :8vh;
+    margin-bottom: 4px;
+}
+.iiird{
+    width:8vh;
+    border-radius:50%;
+    background: rgb(0, 255, 55);
+    height :8vh;
+}
+.scenario{
+    overflow-y: hidden;
+}
+.stat-card1 {
+    background-color: rgb(242, 239, 239);
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width:  auto;
+}
+.stat-card2 {
+    position:relative;
+    
+    margin-top:  5%;
+    background-color: rgb(242, 239, 239);
+    padding: 20px;
+    border-radius: 10px;
+    width: 450px;
+    
+}
 header {
     text-align: left;
     margin-bottom: 30px;
 }
 header {
     
-    justify-content:s;
+    
     margin-bottom: 30px;
 }
 
@@ -37,30 +98,29 @@ header h1 {
 }
 
 .highlight {
-    color: #E5FF5D;
+    color: #1a00a2;
 }
 
 .statistics {
-    display: flex;
+    
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 4%;
 }
 
-.stat-card {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 45%;
+.SCENE{
+    height: auto;
+    margin-bottom: 10px;
 }
 .scenario {
+    
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+
 }
 
 .block {
-    background-color: #444;
-    color: white;
+    background-color: #f2f2f2;
+    color: rgb(0, 0, 0);
     padding: 20px;
     border-radius: 10px;
     width: 23%;
@@ -113,10 +173,11 @@ header h1 {
 
 .shipping-details {
     margin-bottom: 30px;
+
 }
 
 .shipping-details .status {
-    background-color: #222;
+    background-color: #d4d4d4;
     padding: 20px;
     border-radius: 10px;
 }
@@ -133,13 +194,13 @@ header h1 {
     width: 20px;
     height: 20px;
     text-align: center;
-    color: #000;
+    color: #ebebeb;
     margin-right: 10px;
 }
 
 .shipping-history table {
     width: 100%;
-    background-color: #222;
+    background-color: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
 }
@@ -149,10 +210,3 @@ header h1 {
     text-align: left;
 }
 
-.ongoing {
-    color: #ff5e5e;
-}
-
-.shipped {
-    color: #5ee05e;
-}
