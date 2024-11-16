@@ -23,42 +23,43 @@
     </header>
 <main>
 <div class="register">
-            <div class="login">
-                <h2>REGISTER</h2>
-                <form method="POST" action="/login"> <!-- Update action to point to the login route -->
-                    <div class="input-group">
-                        <label for="from">G-mail</label>
-                        <input class="inputbox" type="email" name="username" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="from">USERNAME</label>
-                        <input class="inputbox" type="text" name="username" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="to">Password</label>
-                        <input class="inputbox" type="password" name="password" required>
-                    </div>
-                    
-                    <button type="submit">Register</button>
-                    <div class="more">
-                        
-                </form>
-
-                
+    <div class="login">
+        <h2>REGISTER</h2>
+        <form action="/register" method="POST">
+            <div class="input-group">
+                <label for="email">G-mail</label>
+                <input class="inputbox" type="email" name="email" required>
             </div>
+            <div class="input-group">
+                <label for="username">USERNAME</label>
+                <input class="inputbox" type="text" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input class="inputbox" type="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input class="inputbox" type="password" name="confirm_password" required>
+            </div>
+            <button type="submit">Register</button>
+            <div class="more">
+                <p>Already have an account? <a href="/login">Login</a></p>
+            </div>
+        </form>
+    </div>
 </div>
 </main>
-
-    <script>
-        var icon = document.getElementById("icon");
-        icon.onclick = function() {
-            document.body.classList.toggle("darktheme");
-            if (document.body.classList.contains("darktheme")) {
-                icon.src = "../static/images/moon.png";
-            } else {
-                icon.src = "../static/images/sun.png";
-            }
+<script>
+    var icon = document.getElementById("icon");
+    icon.onclick = function() {
+        document.body.classList.toggle("darktheme");
+        if (document.body.classList.contains("darktheme")) {
+            icon.src = "../static/images/moon.png";
+        } else {
+            icon.src = "../static/images/sun.png";
         }
-    </script>
+    }
+</script>
 </body>
 </html>

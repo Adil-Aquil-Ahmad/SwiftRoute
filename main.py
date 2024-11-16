@@ -55,6 +55,8 @@ Cout = Road("C", "Red", "East", Traffic3[2] + Traffic3[3], Traffic3[5])
 Dout = Road("D", "Green", "North", Traffic4[2] + Traffic4[3], Traffic4[5])
 
 Car_Total = Ain.Vehicle_Amount + Bin.Vehicle_Amount + Cin.Vehicle_Amount + Din.Vehicle_Amount
+if Car_Total<1:
+    Car_Total = 1
 P_Total = Ain.People_Amount + Bin.People_Amount + Cin.People_Amount + Din.People_Amount
 
 

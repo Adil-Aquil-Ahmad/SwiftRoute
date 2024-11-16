@@ -44,7 +44,7 @@ def CarCounter(traffic_video):
             writer.writeheader()
 
         writer.writerow({
-            'Road Name': 0,
+            'Road Name': traffic_video[0:6],
             'Cars Down': 0,
             'Motorcycles Down': 0,
             'Cars Up': 0,

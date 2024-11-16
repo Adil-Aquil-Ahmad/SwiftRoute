@@ -5,7 +5,7 @@
 
 
 /* AIN LIGHTS */
-.ainred{
+.binred{
     width:2.5vh;
     height: 2.5vh;
     background: red;
@@ -15,7 +15,7 @@
     margin-left: -81.5px;
     margin-top: 83px;
 }
-.ainyellow{
+.binyellow{
     width:2.5vh;
     height: 2.5vh;
     background: yellow;
@@ -24,7 +24,7 @@
     margin-left: -104.5px;
     margin-top: 87px;
 }
-.aingreen{
+.bingreen{
     width:2.5vh;
     height: 2.5vh;
     background: green;
@@ -37,9 +37,9 @@
 
 
 /* BIN LIGHTS */
-.binred{
+.cinred{
     width:2.6vh;
-    height: 2.6vh;
+    height: 2.5vh;
     background: red;
     border-radius:50%;
 
@@ -47,7 +47,7 @@
     margin-left: -272px;
     margin-top: 63.9px;
 }
-.binyellow{
+.cinyellow{
     width:2.5vh;
     height: 2.5vh;
     background: yellow;
@@ -56,7 +56,7 @@
     margin-left: -272px;
     margin-top: 89.55px;
 }
-.bingreen{
+.cingreen{
     width:2.6vh;
     height: 2.6vh;
     background: green;
@@ -68,7 +68,7 @@
 
 
 /* CIN LIGHTS */
-.cinred{
+.ainred{
     width:2.5vh;
     height: 2.5vh;
     background: red;
@@ -78,7 +78,7 @@
     margin-left: -77px;
     margin-top: 290.9px;
 }
-.cinyellow{
+.ainyellow{
     width:2.5vh;
     height: 2.5vh;
     background: yellow;
@@ -87,7 +87,7 @@
     margin-left: -76.8px;
     margin-top: 265.5px;
 }
-.cingreen{
+.aingreen{
     width:2.5vh;
     height: 2.5vh;
     background: green;
@@ -126,4 +126,11 @@
     position: absolute;
     margin-left: -263.4px;
     margin-top: 278.2px;
+}
+
+.ainred, .ainyellow, .aingreen,
+.binred, .binyellow, .bingreen,
+.cinred, .cinyellow, .cingreen,
+.dinred, .dinyellow, .dingreen {
+    visibility: hidden;
 }
